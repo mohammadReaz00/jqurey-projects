@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="assets/css/style.css">
+	
+
+	
+</head>
+<body>
+	
+	<input id="nill" type="text" placeholder="Username">
+	<h1></h1>
+
+	<script src="assets/js/jquery-3.4.1.min.js"></script>	
+	<script>
+		
+		$('input#nill').keyup(function(){
+
+			let value = $(this).val();
+
+			if( value.length == '' ){
+				$('h1').html('<span style="color:red;"> Field Khali rakha jabe naa  </span>');
+			}else if( value.length > 0  &&  value.length <= 5  ){
+				$('h1').html('<span style="color:orange;">minimum 6 okkor er username likhun  </span>');
+			}else if( value.length >= 6 && value.length <= 12 ){
+				$('h1').html('<span style="color:green;">Apnar username thik ache !!  </span>');
+			}else if( value.length > 12 ){
+				$('h1').html('<span style="color:red;">vai thamen , , , apni 12 okkorr basi diben naa </span>');
+			}
+
+		});
+		
+
+	
+	</script>
+</body>
+</html>

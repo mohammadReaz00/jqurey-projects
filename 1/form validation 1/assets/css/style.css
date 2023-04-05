@@ -1,0 +1,31 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: candara;
+}
+body {
+	margin: 50px;
+}
+
+
+h1 {
+	text-align: center;
+	
+}
+
+.login-form {
+	width: 400px;
+	padding: 40px;
+	border: 1px solid #ccc;
+	margin: auto;
+}
+
+
+.login-form input {
+ 	width: 100%;
+ 	border: 1px solid #ccc;
+ 	box-sizing: border-box;
+ 	padding: 10px;
+ 	margin-bottom: 10px;
+
+ }

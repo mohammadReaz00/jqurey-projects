@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="marka">
+      <div class="morgi">
+        <img src="assets/img/hqdefault.jpg" alt="" />
+        <h2>Mamun Vai</h2>
+      </div>
+      <div class="has">
+        <img src="assets/img/has.jpg" alt="" />
+        <h2>Salauddin Vai</h2>
+      </div>
+    </div>
+    <hr />
+    <h1>MORGI : <span id="morgi"></span></h1>
+    <h1>HASSS : <span id="has"></span></h1>
+
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script>
+      let votm = 1;
+      let voth = 1;
+
+      $(".morgi img").click(function () {
+        $("span#morgi").text(votm);
+        votm++;
+      });
+
+      $(".has img").click(function () {
+        $("span#has").text(voth);
+        voth++;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="assets/css/style.css">
+	
+
+	
+</head>
+<body>
+	
+	<div class="user">
+		<input id="uname" type="text" placeholder="Username"> 
+		<input id="uemail" type="text" placeholder="Email">
+	</div>
+	<h1></h1>
+
+	<script src="assets/js/jquery-3.4.1.min.js"></script>	
+	<script>
+		
+		
+		$('.user input#uname').keyup(function(){
+			let y = $(this).val();
+
+			if( y == '' ){
+				$('h1').html('<span style="color:red;">Field must not be empty !!</span>');
+			}else if( y.length >= 1 &&  y.length <= 5 ){
+				$('h1').html('<span style="color:orange;">6 okkorer basi hote hobe username</span>');
+			}else if( y == 'haq4747' ){
+				$('h1').html('<span style="color:tomato;">Username already exists </span>');
+			}else if( y.length >= 6 &&  y.length <= 12 ){
+				$('h1').html('<span style="color:green;">Your username is stable </span>');
+			}else if( y.length > 12 ){
+				$('h1').html('<span style="color:blue;">12 okkorer basi username deoya jabe naa </span>');
+			}
+
+
+		});
+
+		$('.user input#uemail').blur(function(){
+			let x = $(this).val();
+			let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+			if(x.match(mailformat)){
+				$('h1').html('<span style="color:green;">Your email is valid </span>');
+			}else{
+				$('h1').html('<span style="color:red;">Your email is invalid </span>');
+			}
+		});
+		
+
+	
+	</script>
+</body>
+</html>

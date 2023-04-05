@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="assets/css/style.css">
+	
+
+	
+</head>
+<body>
+	
+	<h1></h1>
+	<div class="login-form">
+		<input class="uname" type="text" placeholder="Username">
+		<input class="pass" type="password" placeholder="Password">
+		<input class="submit" type="submit" value="Log In">
+	</div>
+
+
+	<script src="assets/js/jquery-3.4.1.min.js"></script>	
+	<script>
+		
+		
+		$('input.submit').click(function(){
+
+			let uname = $('input.uname').val();
+			let pass = $('input.pass').val();
+
+			if(uname == '' || pass == '' ){
+
+				$('h1').html('<span style="color:red;">Field Must not be Empty</span>');
+
+				setTimeout(function(){
+
+					if(uname != ''){
+						$('h1').html(uname + ' Vai <span style="color:red;"> Apni form ta thik moton poron koren  </span>');
+
+							setTimeout(function(){
+								$('h1').text('');
+							}, 2000);
+
+					}else{
+						$('h1').html('');
+					}
+
+				}, 3000);
+
+			}else{
+
+			}
+
+		});
+
+
+		
+	
+	</script>
+</body>
+</html>

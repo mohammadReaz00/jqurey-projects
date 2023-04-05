@@ -1,0 +1,31 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: candara;
+}
+body {
+	margin: 50px;
+}
+
+
+input:focus {
+	outline: none;
+}
+
+
+.user {
+	width: 500px;
+	margin: auto;
+
+}
+
+.user input {
+	padding: 10px;
+	border: 1px solid #ccc;
+	width: 100%;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+}
+
+
+

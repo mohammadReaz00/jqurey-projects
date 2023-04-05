@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="reg-form">
+      <h2>Sign Up Now</h2>
+      <hr />
+      <img
+        style="width: 200px"
+        src="assets/img/1_9EBHIOzhE1XfMYoKz1JcsQ.gif"
+        alt=""
+      />
+      <input id="uname" type="text" placeholder="Username" />
+      <p id="uname"></p>
+      <input id="uemail" type="text" placeholder="Email" />
+      <p id="uemail"></p>
+      <input id="upass" type="password" placeholder="Password" />
+      <p id="upass"></p>
+      <input id="submit" type="submit" value="Sign Up" />
+    </div>
+
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+
+    <script>
+      $(".reg-form input#submit").click(function () {
+        $(".reg-form img").show();
+
+        let uname = $(".reg-form input#uname").val();
+        let uemail = $(".reg-form input#uemail").val();
+        let upass = $(".reg-form input#upass").val();
+
+        setTimeout(function () {
+          $(".reg-form img").hide();
+          if (uname == "") {
+            $("p#uname").html('<span style="color:red;">* Required</span>');
+          } else {
+            $("p#uname").html("");
+          }
+
+          if (uemail == "") {
+            $("p#uemail").html('<span style="color:red;">* Required</span>');
+          } else {
+            $("p#uemail").html("");
+
+            if (uemail.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+              $("p#uemail").html("");
+            } else {
+              $("p#uemail").html(
+                '<span style="color:red;"> Email is not valid !!! </span>'
+              );
+            }
+          }
+
+          if (upass == "") {
+            $("p#upass").html('<span style="color:red;">* Required</span>');
+          } else {
+            $("p#upass").html("");
+          }
+        }, 3000);
+      });
+    </script>
+  </body>
+</html>
