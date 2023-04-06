@@ -1,1 +1,1 @@
-some jquery projects
+some jquery projects added
