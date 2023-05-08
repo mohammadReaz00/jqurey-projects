@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CSS for header section */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.logo {
+  font-size: 2em;
+  font-weight: bold;
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  margin-left: 1em;
+}
+nav a {
+  display: block;
+  padding: 0.5em;
+  color: #333;
+  text-decoration: none;
+}
+nav a:hover {
+  background-color: #f5f5f5;
+}
+
+/* CSS for main section */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* set the height to be equal to the viewport height */
+}
+
+.featured {
+  text-align: center;
+}
+
+main {
+  padding: 2em;
+}
+.featured {
+  margin-bottom: 2em;
+}
+.featured h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+.featured p {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+.featured button {
+  padding: 1em 2em;
+  background-color: #333;
+  color: #fff;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+.featured button:hover {
+  background-color: #666;
+}
+.information h2 {
+  font-size: 2em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+.information p {
+  font-size: 1.2em;
+  margin-bottom: 2em;
+}
+
+/* CSS for footer section */
+footer {
+  background-color: #f5f5f5;
+  padding: 1em;
+  margin-top: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contact-info p {
+  font-size: 1.2em;
+  margin: 0;
+}
